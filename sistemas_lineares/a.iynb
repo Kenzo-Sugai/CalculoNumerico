@@ -1,0 +1,32 @@
+#a
+#inv
+import numpy as np
+
+matrizA = np.matrix(
+    [[2, -1, 3],
+    [2, -1, -3],
+    [1, 1, -4]])
+
+matrizB = np.matrix([[3.5], [-2.5], [0]])
+
+print("%.2f"% np.linalg.det(matrizA))
+
+matrizA_inv = np.linalg.inv(matrizA)
+
+result = matrizA_inv * matrizB
+
+print("Resultador do Sistema Linear (inverso): ")
+print(result)
+
+#solve
+matrizA = np.matrix(
+    [[2, -1, 3],
+    [2, -1, -3],
+    [1, 1, -4]])
+
+matrizB = np.matrix([[3.5], [-2.5], [0]])
+
+result = np.linalg.solve(matrizA, matrizB)
+
+print("Resultador do Sistema Linear (solve): ")
+print(result)
